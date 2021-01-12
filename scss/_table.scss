@@ -1,0 +1,16 @@
+.pricing {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #fafafa;
+    color:$font-color-black;
+    th, td {
+        padding: 1.5rem;
+      }
+    th {
+        background-color: $secundary-color;
+        color: $font-color-white;
+        font-size: 2rem;
+    }
+    
+}

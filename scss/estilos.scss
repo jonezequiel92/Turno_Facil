@@ -1,0 +1,309 @@
+@import "var";
+@import "mixins";
+@import "components";
+@import "table";
+:root {
+    /* colores */
+    --primary-color:     #4A154B;
+    --secundary-color:   #611F69;
+    --background1-color: #FFFFFF;
+    --background2-color: #F6EFE8;
+    --icons-links-color: #4D8ABA;
+    --font-color-white:  #FFFFFF;
+    --font-color-black:  #1D1D1D;
+    --background-color-hover:  #2d0d30;
+
+
+    /* Fuentes */
+    --primary-font: 'Nunito', sans-serif;
+    --secundary-font: 'Roboto', sans-serif;
+
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    font-family: var(--primary-font) ;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+
+
+
+/* Comienza header  */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    background-color: var(--primary-color);
+    color: var(--font-color-white);
+    height: auto;
+    /* height: 14rem;   */
+}
+
+.header__img  {
+    display: inline-block;
+    width: 7rem;
+    transition: 1s;
+}
+.header__img:hover {
+    transform: rotateZ(180deg);
+}
+
+.header__title {
+    display: inline-block;
+    font-size: 3.8rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    
+}
+
+.nav {
+    background-color: var(--primary-color)!important;
+    margin-top: 2rem;
+} 
+
+.nav__links a {
+    color:var(--font-color-white);
+    font-size: 2rem ;
+    padding: 1.2rem;
+    width: 100%;
+    margin-right: 2rem
+}
+
+.nav__links--submenu {
+    background-color: var(--primary-color);
+}
+
+.nav__links--submenu li a {
+    color: var(--background1-color);
+}
+
+.nav__links a:hover {
+    background-color: var(--background-color-hover);
+}
+
+.nav__links li:hover .nav__links--submenu {
+    
+}
+
+.navbar-toggler-icon {
+    width: 2.5em;
+    height: 2.5em;
+    
+}
+
+/* Termina header  */
+
+
+/* Comienza Main */
+
+section {
+    height: auto;
+    margin: 3rem;
+    padding: 2rem;
+}
+
+p {
+    margin-top: 2rem;
+}
+
+.main__hero-text {
+    
+}
+
+.main__hero-text p strong {
+    color:var(--secundary-color) ;
+}
+
+
+.benefits,
+.profile {
+    background-color: var(--background2-color);
+}
+
+h2 {
+    text-transform: capitalize;
+    margin: 2rem;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: var(--secundary-font); 
+}
+
+h3 {
+    font-weight: 600;
+}
+
+.btn {
+    display: flex;
+    height: 6rem;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 1.6rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.14);
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.btn-secondary {
+    background-color: var(--secundary-color);
+}
+
+
+.benefits__table__card img {
+    width: 5rem;
+    margin: 2rem;
+}
+
+#carouselExampleIndicators {
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+/* Termina Main */
+
+
+/* Comienza FOOTER */
+
+footer {
+    background: linear-gradient(to bottom, rgba(97,31,105,1) 0%, rgba(97,31,105,1) 36%, rgba(74,21,75,1) 73%, rgba(45,13,48,1) 100%);
+    color: var(--background2-color);
+    height: 18rem;
+}
+
+footer div  {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+footer div p {
+    font-size: 2rem;
+}
+
+footer div a img {
+    display: inline-block;
+    height: 4rem;
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+
+/* Termina FOOTER */
+
+/***** COMIENZA SECCION ACERCA DE  *****/
+/***** TERMINA SECCION ACERCA DE  ******/
+
+/***** COMIENZA SECCION PLANES  ******/
+
+
+
+/* MEDIA QUERYS */
+
+@media only screen and (min-width: 768px){
+    
+    .header__title {
+        display: inline-block;
+        font-size: 4.8rem;
+        font-weight: 600;
+        /* margin-top:2rem; */
+        
+    }
+
+    .main__hero-text p {
+        font-size: 1.6rem;
+    }
+    
+    .btn {
+        font-size: 2rem;
+    }
+    
+    #carouselExampleIndicators {
+        margin: auto;
+        width: 66%;
+        height: auto;
+    }
+}
+
+ @media only screen and (min-width: 1024px) {
+    .main__hero-text p {
+        font-size: 2.4rem;
+    }
+    .btn {
+        font-size: 2rem;
+    }
+
+    .about {
+        
+        .about__title {
+            color: $font-color-white;
+            font-size:2.6rem ;
+            margin: 0;
+            background-color: $secundary-color;
+            padding: 1.6rem;
+            width: 100%;
+        }
+        
+    }
+
+    .compromise {
+        padding: 2rem;
+        .compromise__img img {
+            width: 80%;
+        }
+    }
+
+    .team {
+        padding:2rem;
+        .team__text {
+        }
+        .team__image img{
+            margin-top: 2.4rem;
+            width: 100%;
+            height: auto; 
+        }
+    }
+
+    .review {
+        margin: 2rem;
+        padding: 1rem;
+        font-family: $secundary-font;
+        h2 {
+            display: inline-block;
+            color: $font-color-black;
+        }
+        
+    }
+    .review__card {
+        box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.60);
+        margin: 1rem;
+        padding: 1rem;
+    }
+    .review__card img {
+        display: inline-block;
+        width: 26rem;
+        height: 14rem;
+    }
+    .card-title {
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
+    .card-title span {
+        font-weight: 300;
+    }
+}

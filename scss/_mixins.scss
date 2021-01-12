@@ -1,0 +1,9 @@
+@mixin header2 {
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+    margin: 2rem;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: var(--secundary-font); 
+}

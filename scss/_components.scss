@@ -1,0 +1,89 @@
+.h2 {
+    @include header2;
+}
+
+.breadcrumbs__nav {
+    background-color: #fafafa;
+    padding: 1rem;
+}
+
+.blog{
+    margin: 0;
+    padding:0;
+}
+
+.blog__article {
+    background-color: #fafafa;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid $font-color-black ;
+    iframe{
+        width: 26rem;
+        height: 13rem;
+    }
+}
+
+
+
+.form {
+    position: relative;
+    display: flex;
+    text-align: start;
+    padding: 1rem;
+    margin: 0;
+}
+.form__imgContainer {
+    margin: 0;
+    padding: 0;
+    
+    width: 100%;
+    }  
+
+.form__imgContainer img {
+    width: 100%;
+}
+
+.form__card {
+    background-color: #fafafa;
+    padding: 2rem;
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .form__card {
+        position: absolute;
+        z-index: 9;
+        padding: 2rem;
+        top: 12rem;
+        right: 2rem;
+    }
+    .form__imgContainer img {
+        width: 100%;
+        height: 50rem;
+    }
+}
+
+@media only screen and (min-width: 425px){
+    .blog__article {
+        iframe{
+            width: 37rem;
+            height: 18rem;
+        }
+    }
+}
+@media only screen and (min-width: 768px){
+    .blog__article {
+        iframe{
+            width: 61rem;
+            height: 30rem;
+        }
+    }
+}
+@media only screen and (min-width: 1024px){
+    .blog__article {
+        iframe{
+            width: 89rem;
+            height: 43rem;
+        }
+    }
+}
