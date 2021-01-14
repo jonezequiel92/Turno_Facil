@@ -123,21 +123,25 @@ header {
 
 .header__img {
   display: inline-block;
+  position: relative;
   width: 7rem;
-  transition: 1s; }
+  transition: 1s;
+  object-fit: contain;
+  top: -8px; }
 
 .header__img:hover {
   transform: rotateZ(180deg); }
 
 .header__title {
   display: inline-block;
-  font-size: 3.8rem;
+  font-size: 3.4rem;
   font-weight: 600;
-  margin-top: 2rem; }
+  margin: 2rem;
+  margin-left: 1rem; }
 
 .nav {
   background-color: var(--primary-color) !important;
-  margin-top: 2rem; }
+  margin-top: 1rem; }
 
 .nav__links a {
   color: var(--font-color-white);
@@ -163,17 +167,23 @@ header {
 /* Comienza Main */
 section {
   height: auto;
-  margin: 3rem;
-  padding: 2rem; }
+  margin: 1rem;
+  padding: 1rem; }
 
 p {
   margin-top: 2rem; }
+
+.main__hero-text p {
+  font-size: 1.8rem;
+  line-height: 2;
+  letter-spacing: 1.1px; }
 
 .main__hero-text p strong {
   color: var(--secundary-color); }
 
 .benefits,
-.profile {
+.profile,
+.team {
   background-color: var(--background2-color); }
 
 h2 {
@@ -186,9 +196,19 @@ h2 {
 h3 {
   font-weight: 600; }
 
+.carousel__container {
+  min-width: 265px; }
+
+#carouselExampleIndicators {
+  margin: auto;
+  width: 100%;
+  height: auto; }
+
 .btn {
+  position: relative;
   display: flex;
   height: 6rem;
+  width: 90%;
   padding: 1rem;
   margin: 2rem;
   border-radius: 1.6rem;
@@ -196,7 +216,12 @@ h3 {
   cursor: pointer;
   box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.14);
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  transition: 450ms; }
+
+.btn:hover {
+  transform: scale(1.15);
+  z-index: 2; }
 
 .btn-secondary {
   background-color: var(--secundary-color); }
@@ -204,11 +229,6 @@ h3 {
 .benefits__table__card img {
   width: 5rem;
   margin: 2rem; }
-
-#carouselExampleIndicators {
-  margin: auto;
-  width: 100%;
-  height: auto; }
 
 /* Termina Main */
 /* Comienza FOOTER */
@@ -237,13 +257,16 @@ footer div a img {
 /***** COMIENZA SECCION PLANES  ******/
 /* MEDIA QUERYS */
 @media only screen and (min-width: 768px) {
+  section {
+    margin: 2rem;
+    padding: 2rem; }
   .header__title {
     display: inline-block;
     font-size: 4.8rem;
     font-weight: 600;
     /* margin-top:2rem; */ }
   .main__hero-text p {
-    font-size: 1.6rem; }
+    font-size: 1.8rem; }
   .btn {
     font-size: 2rem; }
   #carouselExampleIndicators {
@@ -252,8 +275,11 @@ footer div a img {
     height: auto; } }
 
 @media only screen and (min-width: 1024px) {
+  section {
+    margin: 3rem;
+    padding: 3rem; }
   .main__hero-text p {
-    font-size: 2.4rem; }
+    font-size: 2.2rem; }
   .btn {
     font-size: 2rem; }
   .about .about__title {
@@ -280,8 +306,10 @@ footer div a img {
     .review h2 {
       display: inline-block;
       color: #1D1D1D; }
+    .review p {
+      font-weight: 300; }
   .review__card {
-    box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.6);
+    box-shadow: 5px 0 10px 0 rgba(0, 0, 0, 0.2);
     margin: 1rem;
     padding: 1rem; }
   .review__card img {
@@ -293,3 +321,12 @@ footer div a img {
     font-size: 1.8rem; }
   .card-title span {
     font-weight: 300; } }
+
+@media only screen and (min-width: 1440px) {
+  body {
+    font-size: 2.2rem; }
+  section {
+    margin: 4rem;
+    padding: 4rem; }
+  .main__hero-text p {
+    font-size: 3rem; } }
